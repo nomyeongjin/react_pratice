@@ -62,10 +62,30 @@ let concatedArr = arr6.concat(arr7);
 
 console.log(concatedArr) // 두 배열이 붙은 값이 저장됨
 
+console.log("1섹션 완료")
 
+/*----------------------*/
 
-function getRequiredCorn(targetOil) {
-    const cornPerOil = 6 / 3;
-    return targetOil * cornPerOil;
-}
-console.log(getRequiredCorn(100));
+// 5가지 요소 순회 및 탐색 메서드
+// 1. forEach
+// -> 모든 요소를 순회하면서, 각각의 요소에 특정 동작을 수행시키는 메서드
+let arrA = [1,2,3]
+
+arrA.forEach(function(item, index, arr){ // 콜백함수로 차례대로 아이템, 인덱스번호, 배열이 담김
+    console.log(item, index)
+})
+
+let doubledArr = [];
+
+arrA.forEach((item)=>{
+    doubledArr.push(item*2)
+})
+
+console.log(doubledArr)
+
+// 2. includes
+// -> 배열에 특정 요소가 있는지 확인하는 메서드
+let arrB = [1,2,3]
+let includesB = arrB.includes(3); 
+
+console.log(includesB) // true false값 반환
